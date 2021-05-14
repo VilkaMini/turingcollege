@@ -28,7 +28,7 @@ def cars_id(car_id: str) -> str:
             if car["id"] == car_id:
                 return json.dumps(car)
             else:
-                return json.dumps({"error": "CAR NOT FOUND"})
+                return json.dumps({"error": "CARS NOT FOUND"})
     
     if request.method == "PUT":
         car_data = json.loads(request.data)
@@ -37,14 +37,14 @@ def cars_id(car_id: str) -> str:
                 car["model"] = car_data["model"]
                 car["range"] = car_data["range"]
                 return json.dumps(car)
-        return json.dumps({"error": "CAR NOT FOUND"})
+        return json.dumps({"error": "CARS NOT FOUND"})
     
     if request.method == "DELETE":
         for car in cars:
             if car["id"] == car_id:
                 cars.remove(car)
                 return json.dumps({"message": "CAR WAS DELETED"}), 200
-        return json.dumps({"error": "CAR NOT FOUND"})            
+        return json.dumps({"error": "CARS NOT FOUND"})            
 
 if __name__ == "__main__":
     app.run(debug=True)
