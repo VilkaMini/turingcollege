@@ -1,0 +1,7 @@
+README.md
+setup.py
+src/calculator.py
+src/vilkamini_calculator.egg-info/PKG-INFO
+src/vilkamini_calculator.egg-info/SOURCES.txt
+src/vilkamini_calculator.egg-info/dependency_links.txt
+src/vilkamini_calculator.egg-info/top_level.txt
